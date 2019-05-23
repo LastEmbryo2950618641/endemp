@@ -1,0 +1,97 @@
+body {
+   overflow: hidden;
+   margin: 0;
+
+}
+body .bk-i {
+  position: absolute;
+  width:100%;
+  z-index: -10;
+}
+.web-Ifo {
+  position: absolute;
+  bottom:0px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 30px;
+  background-color: rgba(157, 83, 118, 1);
+  font-size: 12px;
+}
+
+.body {
+  padding-top: 50px;
+}
+.login {
+  background-color: rgba(255,255,255,0.9);
+  width: 400px;
+  height: 600px;
+  display: grid;
+  grid-template-columns:1fr;
+  grid-template-rows:1.5fr repeat(4,1fr);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+.login .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.login .logo img {
+  width:70%;
+}
+.login .input {
+  padding: 10px 40px;
+
+}
+.login input {
+  background-color: rgba(0,0,0,0);
+  border: 0;
+  outline: none;
+  padding: 10px 0;
+}
+.login .downLine {
+  height:1px;
+  width: 0px;
+  background: red;
+}
+.login input:focus + .downLine {
+  width:100%;
+  transition: width 1s;
+}
+.login .btn {
+  padding:25px 40px;
+
+}
+.login .btn a {
+
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(84, 95, 255, 1);
+  text-decoration: none;
+  color: white;
+}
+.login .btn a:hover {
+  background-color: rgba(59,66,174,1);
+  color: rgba(220,220,220,1);
+}
+.login .other {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 13px;
+}
+.login .other a {
+  text-decoration: none;
+  color: rgba(66,66,66,1);
+}
+.login .other a:hover {
+  color: rgba(255,80,226,1);
+}
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
