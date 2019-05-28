@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "NSimSun";
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.select {
+  display: inline-block;
+  position: relative;
+
+}
+.select .title {
+  display: block;
+  padding: 4px 10px;
+  background-color: #777777;
+  color: white;
+  border-radius: 4px;
+}
+.select:hover {
+  cursor: pointer;
+}
+
+.select-context {
+  display: none;
+  position: absolute;
+  background: rgba(255, 255, 255, 1);
+
+  width: 160px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px 4px rgba(220, 220, 220, 0.7);
+}
+.select-context p {
+
+  padding: 10px 10px;
+
+  font-weight: 900;
+
+}
+.select-context p:hover {
+  background-color: rgba(200, 50, 100, 1);
+  color: white;
+}
+
+textarea {
+  resize: none;
+}
+
+.per-container {
+  display: grid;
+  width: 100%;
+  grid-template: "inputArea ouputArea";
+}
+
+.per-container .inputArea ,
+.per-container .ouputArea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0;
+
+}
+.per-container .inputArea > * ,
+.per-container .ouputArea > * {
+  width: 60%;
+  margin: 10px 0;
+
+}
+.per-container > * > * {
+  width: 100%;
+}
+
+.per-container .inputArea > textarea ,
+.per-container .ouputArea > textarea {
+  height: 440px;
+  outline: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-family:fantasy;
+}
+.per-container .inputArea > textarea:focus ,
+.per-container .ouputArea > textarea:focus {
+  border: 1px solid rgba(100, 100, 100, 0.5);
+  box-shadow: 0px 0px 2px 2px rgba(100, 100, 100, 0.5);
+
+}
+.per-container .inputArea .text-operation .count-btn{
+
+  padding: 4px 10px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: rgba(100, 100, 100, 1);
+  color: white;
+  border-radius: 4px;
+
+}
+
+.per-nav {
+  display: grid;
+  height: 50px;
+  grid-template-columns: repeat(12,1fr);
+  box-shadow: 0 0 4px 4px rgba(200, 200, 200, 1);
+}
+.per-nav > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-name .img {
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid rgba(100, 100, 100, 1);
+  margin-right: 5px;
+}
+.user-name .img img {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
