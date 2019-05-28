@@ -31,7 +31,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-       web.ignoring().antMatchers("/static/**");
+
+       web.ignoring().antMatchers("/resource/**" ,"/**","/endemp/**");
+
     }
 
     @Override
@@ -55,14 +57,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
        // super.configure(http);
+
         http.authorizeRequests()
-                .antMatchers("/login*","/static/**").permitAll()
-                .anyRequest().authenticated()
+                .antMatchers("/**").permitAll()
                 .and()
                 .formLogin()
-                .loginPage("/loginHandler")
+                .loginPage("/login")
+                .loginProcessingUrl("/loginHandler")
                 .failureUrl("/login-error")
-                .loginProcessingUrl("/index")
                 .successForwardUrl("/index")
                 .and()
                 .logout()
