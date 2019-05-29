@@ -45,9 +45,7 @@ public class CustUserDetailService implements UserDetailsService {
         }
 
         List<SysPermission> sysPermissions = permissionDao.findByAdminUserId(user.getId());
-
         List<GrantedAuthority> authorities = new ArrayList<>();
-
         for (SysPermission sysPermission:
         sysPermissions) {
 

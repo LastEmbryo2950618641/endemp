@@ -25,13 +25,13 @@ public class SysUserController {
        HttpSession session = request.getSession();
 
        if(sysUser==null){
-           return "/login-error";
+           return "login-error";
        }else if(sysUser.getPassword().equals(password)){
            session.setAttribute("username",username);
            session.setAttribute("password",password);
-           return "/pass";
+           return "wordscount";
        }else{
-           return "/login-error";
+           return "login-error";
        }
 
     }

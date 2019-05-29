@@ -3,6 +3,7 @@ $(function () {
 
     $("#login_btn").click(function () {
 
+
         var name=$("input[name='username']").val();
         var pass=$("input[name='password']").val();
 
@@ -10,7 +11,7 @@ $(function () {
             username:name,
             password:pass
         };
-        alert(name);
+
 
         $.ajax({
             type:"POST",
@@ -18,12 +19,13 @@ $(function () {
             data:data,
             //credentials: 'include',
             success:function(data){
-                window.location.href=contextPath+"/libbox"+data;
+                window.location.href=contextPath+"/libbox/"+data;
             },
             error:function (data) {
                 window.location.href=contextPath+data;
             }
         });
+
 
     });
 

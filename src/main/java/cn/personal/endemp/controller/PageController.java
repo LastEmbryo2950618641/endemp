@@ -34,8 +34,11 @@ public class PageController {
         return "index";
 
     }
+    @RequestMapping("wordscount")
+    public String wordscount(){
 
-
+        return "views/function/wordscount";
+    }
 
 
 }

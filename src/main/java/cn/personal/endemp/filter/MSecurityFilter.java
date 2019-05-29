@@ -36,8 +36,6 @@ public class MSecurityFilter implements Filter {
             }
             filterChain.doFilter(servletRequest,servletResponse);
 
-
-
     }
 
     @Override
